@@ -57,6 +57,47 @@ More nosing around to figure out the basics. In templates/layouts/default.jade, 
 I went ahead and hid 2 things - the "sign in" option, and the small "My site" link on the navbar.
 Made some small changes to the footer as well.
 
+Now, let's try to shift around the navigation / add new pages as we need.
+Right now, we have a Home, Blog, Gallery, and Contact.
+
+What we'd like to do is have the following:
+Home, Projects, Blog, Contact
+
+The "Projects" section will be by far the most complicated portion, but it would share some similarities with what the "Gallery" section accomplishes, We'll go ahead and revisit that later another day.
+
+Let's do some renaming / order switching. The documentation states that we must mess around with routes/middleware.js.
+
+I reordered the middleware like so:
+
+:exports.initLocals = function (req, res, next) {
+	res.locals.navLinks = [
+		{ label: 'Home', key: 'home', href: '/' },
+		{ label: 'Projects', key: 'projects', href: '/projects' },
+		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
+		{ label: 'Blog', key: 'blog', href: '/blog' },
+		{ label: 'Contact', key: 'contact', href: '/contact' },
+	];
+	res.locals.user = req.user;
+	next();
+};
+
+I do not expect this to work, given that I just blatantly threw in a "project" link.
+Before I even run this - I expect the project to still run. It just will throw a 404 when i click on "projects"
+And it did.
+
+Alright, let's fix this!
+
+I expect to have to make a new template (projects.jade), as a first step.
+Then I'll have to edit the routes/index.js
+Then I'll have to create a file (will mirror routes/ivews/index) and call it projects.js.
+I'll then have to tie them together.
+
+And done!
+
+My next step is to begin some customization. After further thinking through it, I'd like to work on a quick first iteration of the site, as well as transition the projects page into more of a dashboard that I can display relevant information on other items.
+
+
+
 
 
 

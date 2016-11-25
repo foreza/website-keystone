@@ -3,21 +3,19 @@ extends ../layouts/default
 block content
 	.container: .jumbotron
 		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is Jason's new website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
+		h1 I'm Jason.
+		p Welcome to my site!
 		hr
+
 		if user && user.canAccessKeystone
+			p Welcome back. Remember to always put up new content, and keep projects updated.
 			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>jforeza@gmail.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
+				a(href='/keystone').btn.btn-lg.btn-primary Open Admin UI
 		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+
+		h2 About Me
+		p This and that.
+
+
+		h2 Work
+		p I currently work at The Portal as a Project Manager.
