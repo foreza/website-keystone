@@ -13,16 +13,27 @@ As a challenge to myself, rather than working locally on my computer, I'll be ut
 I'll cover what I use with this project, along with what I used to use to match, along with some Pros and Cons.
 
 For this project:
-Atom.io (editor) with the Remote-FTP package to allow me to work on a server
-Yeoman (library) for scaffolding / Keystone: http://yeoman.io/
-KeystoneJS (library)
-Jade (javascript templating engine)
-Less (css pre-processor)
-Gulp (build scripts / automation)
-Cloudinary (images) - may not be needed
-Mandrill (emailing) - may not be needed
-Github (cloud repository service) as this will be a public site / leaning exercise
-Digital Ocean (server hosting) to seperate myself a bit from the pack (really? nah.)
+- Atom.io (editor) with the Remote-FTP package to allow me to work on a server
+- Yeoman (library) for scaffolding / Keystone: http://yeoman.io/
+- KeystoneJS (library)
+- Jade (javascript templating engine)
+- Less (css pre-processor)
+- Gulp (build scripts / automation)
+- Cloudinary (images) - may not be needed
+- Mandrill (emailing) - may not be needed
+- Github (repo)
+- Digital Ocean (server hosting)
+
+
+SETUP
+- Clone the repo from https://github.com/foreza/website-keystone
+- Run "npm install"
+- Run "node node_modules/unicode/install.js"
+- Then run node keystone
+- Navigate to port 3000 (for development)
+...
+
+Or run "bash install.sh"
 
 
 
@@ -175,8 +186,6 @@ Well, slay me. It may just be because I'm utilizing a macbook at the very moment
 As long as we do not see these issues on our droplet, we should be good!
 
 
-
-
 Action Items:
 - Update project information with the technologies selected
 - Put this up on git
@@ -198,9 +207,6 @@ Error: Cannot find module 'unicode/category/So'
 
 A quick google search reveals:
 https://github.com/keystonejs/generator-keystone/issues/129
-
-Ok, so let's "apt-get install unicode" on the server.
-Nope, no go.
 
 How about: node node_modules/unicode/install.js
 Something seemed to happen. Let's try to re-run.
