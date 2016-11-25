@@ -10,15 +10,13 @@ var keystone = require('keystone');
 // and documentation.
 
 keystone.init({
-	'name': 'My Website',
-	'brand': 'My Website',
-
+	'name': "Jason Chiu - Website",
+	'brand': 'Vartyr',
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-
 	'emails': 'templates/emails',
 	'cloudinary config': 'cloudinary://api_key:api_secret@cloud_name',
 	'cookie secret': '(your secret here)',

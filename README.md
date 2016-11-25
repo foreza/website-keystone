@@ -36,6 +36,31 @@ SETUP
 Or run "bash install.sh"
 
 
+Day 2: Let's make some changes!
+
+TODO:
+Make a quick bash script / installation guide so I can not be lazy later on (done)
+
+Today's adventure (now that I have this all set up) is to get some basic edits in there, and familiarize myself with what keystone really has to offer.
+
+I'll be making some minor front end changes, mocking up some pages, and also talking my way through what the goals of my site should, be, while exploring the feature set / how all of these technologies weave together.
+
+The first place to look if we want to touch the front end is the /templates/views directory. Let's go there.
+I see 5 files and a folder which contains a 404 (not found) and a 500 (internal server) error page.
+We want to play around with the index page, don't we? Let's make a couple of edits.
+But before we dive too deep, how are these being served?
+
+Well, standard practice dictates it should be in the routes folder. Upon opening index.js, I see that the index page is served because that is what routes/views/index.js tells us.
+
+More nosing around to figure out the basics. In templates/layouts/default.jade, I'm able to modify the website title, and presumably the header/footer.
+
+I went ahead and hid 2 things - the "sign in" option, and the small "My site" link on the navbar.
+Made some small changes to the footer as well.
+
+
+
+
+
 
 
 Day 1: Environment Setup/Installing Dependencies
