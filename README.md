@@ -36,6 +36,77 @@ SETUP
 Or run "bash install.sh"
 
 
+Day 3: Planning / more learning:
+
+Hi all. Took a pretty long break between yesterday and today's work.
+The goal of today is to have a clear list of requirements of the site.
+I sped along the process to get something to work with as a start, but now it's time to lock in what I am looking for in my site, and architect this out properly.
+Basically, I'll be doing the discovery process with myself. Yay!
+
+I need this website to accomplish, at a very high level, the following:
+- A place for recruiters / employers to view my relevant work
+- A place for recruiters / employers to contact me
+- A place for individuals to learn about me and what I do
+- A place for me to create content to showcase what I've learned
+
+Let's stick to these 4 pillars, and arrange the current features of the site around these:
+
+- Projects Page (view relevant work)
+- Contact (contact me)
+- Home (learn about me, what I do)
+- Blog (create content)
+
+I want to shuffle these in order of my priority. Hold on...
+
+- Home (learn about me, what I do)
+- Projects Page (view relevant work)
+- Contact (contact me)
+- Blog (create content)
+
+Ok. My goal for today should be to then figure out the specifics I need for each page.
+Story generation time! I am a project manager, after all.
+
+- Home
+	Users should be able to know who I am in less than a paragraph.
+	Users should be able to know what I do for work in less than a paragraph.
+	Users should be able to do in my spare time.
+	Users should be able to see a simple image of me.
+	Users should be able to see a logo / my personal brand.
+
+- Projects
+	Users should be able to view a list of the (public) projects I have contributed to / worked on.
+	Users should be able to view a specific project and know what it is, and my role in the project.
+	Users should be able to filter by a set of tags (The Portal, Game Development, In-progress, etc..) and view the projects that match
+	Admin User(s) should be able to add a new project.
+	Admin User(s)  should be able to modify/remove an existing project.
+
+- Contact
+	Users should be able to send me job requests, inquiries through a contact form
+	Users should be able to view a public business email if they'd like to reach out
+	Users should be able to view my business social media (linkedin, github)
+	Users should be able to know the best ways to reach me / my response time & availability
+	Admin User(s) should be able to view inquiries.
+
+- Blog
+	Admin User(s) should be able to create posts.
+	Admin User(s) should be able to upload images with the posts.
+	Admin User(s) should be able to manage/edit/remove posts.
+	Users should be able to view any posts that are made publicly viewable.
+	Users should be able to link to a particular post.
+
+Pretty big list. These are just the top level stories with no added description. I fear that I'll get far too deep into the story generating process, so let's stop here for now and review.
+The CMS installed already (Keystone) takes care of a pretty much the bulk of the stories for the Blog and Contact. We're really focusing on the custom features that makes the website mine.
+
+I want to build the framework / skeleton for the custom content first. This means architecting out what the home page should be, what the project page should be, and putting in placeholders. The content can come later.
+
+So let's start with the home page. My goal today will be to create a home page with placeholder content that is mine without a doubt!
+
+
+
+
+
+
+
 Day 2: Let's make some changes!
 
 TODO:
@@ -95,6 +166,14 @@ I'll then have to tie them together.
 And done!
 
 My next step is to begin some customization. After further thinking through it, I'd like to work on a quick first iteration of the site, as well as transition the projects page into more of a dashboard that I can display relevant information on other items.
+
+Goals for the next time I revisit:
+
+Decide exactly how I want the projects page formatted / viewed
+Add some page content
+Add Cloudinary API so I can add images / find my own solution
+Learn some more Jade / switch to serving HTML/CSS instead
+
 
 
 
