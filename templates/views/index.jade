@@ -2,20 +2,23 @@ extends ../layouts/default
 
 block content
 	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 I'm Jason.
-		p Welcome to my site!
-		hr
+		.row
+			.col-md-3.col-sm-12
+				img(src='https://placeholdit.imgix.net/~text?txtsize=23&bg=ffffff&txtclr=000000&txt=250%C3%97250&w=250&h=250').image-div-center
+			.col-md-1
+			.col-md-8.col-sm-12.image-div-center
+				h2 About
+				p [PLACEHOLDER] Jason graduated from the University of California, Irvine in Spring 2016 with a bachelors degree in Computer Game Science.
 
+
+				h2 Work
+				p [PLACEHOLDER] Jason currently works at The Portal as a Project Manager.
+
+
+		// Admin Greeting Message
 		if user && user.canAccessKeystone
+			hr
 			p Welcome back. Remember to always put up new content, and keep projects updated.
 			p
 				a(href='/keystone').btn.btn-lg.btn-primary Open Admin UI
-		hr
-
-		h2 About Me
-		p This and that.
-
-
-		h2 Work
-		p I currently work at The Portal as a Project Manager.
+			hr
