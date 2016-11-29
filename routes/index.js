@@ -29,6 +29,7 @@ keystone.pre('render', middleware.flashMessages);
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
+	api: importRoutes('./api')
 };
 
 // Setup Route Bindings
@@ -39,6 +40,14 @@ exports = module.exports = function (app) {
 	app.get('/blog/post/:post', routes.views.post);
 	app.all('/contact', routes.views.contact);
 	app.all('/projects', routes.views.projects);
+
+	// Make an API: https://gist.github.com/JedWatson/9741171
+	app.get('/api/project/list', keystone.middleware.api, routes.api.projects.list);
+	app.all('/api/project/create', keystone.middleware.api, routes.api.projects.create);
+	app.all('/api/project/test', keystone.middleware.api, routes.api.projects.test); // TODO: REMOVE THIS
+	app.get('/api/project/:id', keystone.middleware.api, routes.api.projects.get);
+	app.all('/api/project/:id/update', keystone.middleware.api, routes.api.projects.update);
+	app.get('/api/project/:id/remove', keystone.middleware.api, routes.api.projects.remove);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

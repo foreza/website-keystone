@@ -14,7 +14,9 @@ block content
 					button.btn.btn-default(type='button') Web Development
 					button.btn.btn-default(type='button') Game Development
 
-		// Hardcoded for now until we hook this up to a backend and create the data models.
+		
+		each project in data.projects
+			p=	project.name
 
 		.container.project-listing
 
