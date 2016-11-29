@@ -3,18 +3,39 @@ extends ../layouts/default
 block content
 	.container: .jumbotron
 		p This is Jason's project page. Work is (clearly) in progress.
+
 		.row
-			.col-md-6.col-sm-12
-				h2 Past Work
-				.row
-					.col-md-6
-						p	test
-					.col-md-6
-						p	test
-			.col-md-6.col-sm-12
-				h2 Ongoing Work
-				.row
-					.col-md-6
-						p	test
-					.col-md-6
-						p	test
+			.col-md-3.hidden-sm.hidden-xs
+				input(type=type, placeholder='Search')
+			.col-md-9.hidden-sm.hidden-xs
+				span Sort by:
+				.btn-group(role='group', aria-label='...')
+					button.btn.btn-default(type='button') Project Management
+					button.btn.btn-default(type='button') Web Development
+					button.btn.btn-default(type='button') Game Development
+
+		// Hardcoded for now until we hook this up to a backend and create the data models.
+
+		.container.project-listing
+
+			// Project Title
+			.row
+				.col-md-6
+					p Project Name
+				.col-md-6
+					p Project Date, Project Status
+
+			// Project Information
+			.row
+				.col-md-3.col-sm-12
+					img(src='https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150').image-project-listing
+					.row
+				.col-md-1.col-sm-12
+				.col-md-8
+					.row
+						.col-md-12.col-sm-12
+							b	Brief Description:
+							p	Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+						.col-md-12.col-sm-12
+							b	My Role:
+							p	Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
