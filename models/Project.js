@@ -12,10 +12,11 @@ var Types = keystone.Field.Types;
 
 var Project = new keystone.List('Project');
 
-// Note: Does not support nested schemas at this time.
+// Note: Does not support nested schemas at this time: https://github.com/keystonejs/keystone/issues/153
 
 Project.add({
-	name: { type: String, required: true, index: true, default: "New Project"},
+	name: { type: String, required: true, index: true, default: "project"},
+	displayName: { type: String, required: true, default: "New Project"},
 	startDate: { type: Date, required: false, index: false},
 	endDate: { type: Date, required: false, index: false},
 	isComplete: { type: Boolean, required: false, index: false, default: "true"},

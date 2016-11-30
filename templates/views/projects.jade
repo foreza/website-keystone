@@ -2,36 +2,26 @@ extends ../layouts/default
 
 block content
 	.container: .jumbotron
-		p This is Jason's project page. Work is (clearly) in progress.
+		h1	Projects
 
-		.row
-			.col-md-3.hidden-sm.hidden-xs
-				input(type=type, placeholder='Search')
-			.col-md-9.hidden-sm.hidden-xs
-				span Sort by:
-				.btn-group(role='group', aria-label='...')
-					button.btn.btn-default(type='button') Project Management
-					button.btn.btn-default(type='button') Web Development
-					button.btn.btn-default(type='button') Game Development
+		// Repeat to show all the projects
 
-		.container.project-listing
-
-			// Repeat to show all the projects
-
-			each project in data.projects
-
-
+		each project in data.projects
+			.container.project-listing
 				// Project Title
-				.row
-					.col-md-6
-						p=	project.name
-					.col-md-6
-						if project.isComplete == true
-							p= project.startDate  + " " + project.endDate + ", Complete"
+				.row.project-title
+					.col-md-6.project-name-display
+						if user && user.canAccessKeystone == true
+							p=	project.displayName + "( " + project.name + " )"
 						else
-							p= project.startDate  + " " + project.endDate +", In-Progress"
+							p= project.displayName
+					.col-md-6.project-date-completion
+						if project.isComplete == true
+							p=	moment(project.startDate).format("MMMM YYYY") + " to " + moment(project.endDate).format("MMMM YYYY")
+						else
+							p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
 
-				// Project Information
+					// Project Information
 				.row
 					// Project Image
 					.col-md-3.col-sm-12
@@ -47,5 +37,7 @@ block content
 							.col-md-12.col-sm-12
 								b	My Role:
 								p= project.role
+							.col-md-12.col-sm-12
+							// Temporary placeholder while we get the rest of the page wrapped up | button.btn.btn-default(type='button') Learn More!
 				br
 				br
