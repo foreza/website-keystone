@@ -36,6 +36,27 @@ SETUP
 Or run "bash install.sh"
 
 
+Day 4: Catch-up.
+
+First thing - these posts (just to clarify) will be moved at some point to my blog. I'm just leaving them here with the README so I don't forget in the early stages of my development (and also, it's in my face when I open up my IDE so there is that).
+
+To summarize what I've achieved so far:
+
+I mocked up a projects page, and started a trello issue board to keep things neat for myself. I copied over the stories that we had specified further below.
+
+I did some research with how best to implement an API with Keystone, so I can easily perform CRUD operations. This is a good start / review for me, as I initially had not planned on going so far.
+
+I then implemented said API for projects to prove said concept. This involved, at a very high level, declaring a couple of new route bindings in index.js, and then creating a different file for my API routes, seperate of the view routes.  
+
+I then created a new model for projects, and tested a basic echo (creating a project with only 1 field on the backend, making sure the server could grab it, making sure I could serve a jade template with it).
+
+I then expanded upon this, learning how to work with Jade and also expanding upon my original project model, learning how to better access and show things with Jade.
+
+I'm now at the point where I plan to create a quick form on the admin panel side so I can easily add and manage projects. As this will be more internal facing, I'll focus on just functionality for this portion.
+
+The goal by the end of today's work session is to have the ability to add, edit, and remove projects without directly messing with the data itself through mongochef or dropping things like I love to do.
+
+
 Day 3: Planning / more learning:
 
 Hi all. Took a pretty long break between yesterday and today's work.
