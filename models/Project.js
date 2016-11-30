@@ -12,9 +12,16 @@ var Types = keystone.Field.Types;
 
 var Project = new keystone.List('Project');
 
+// Note: Does not support nested schemas at this time.
 
 Project.add({
-	name: { type: String, required: true, index: true, default: "New Project"}
+	name: { type: String, required: true, index: true, default: "New Project"},
+	startDate: { type: Date, required: false, index: false},
+	endDate: { type: Date, required: false, index: false},
+	isComplete: { type: Boolean, required: false, index: false, default: "true"},
+	imgUrl: { type: String, required: false, index: false, default: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"},
+	descShort: { type: String, required: false, index: false, default: "Work in progress."},
+	role: { type: String, required: false, index: false, default: "Member"}
 });
 
 // Adventurer.add({
@@ -30,5 +37,5 @@ Project.add({
 /**
  * Registration
  */
-Project.defaultColumns = 'project_name';
+Project.defaultColumns = 'name';
 Project.register();
