@@ -20,7 +20,7 @@ keystone.init({
 	'emails': 'templates/emails',
 	'cloudinary config': 'cloudinary://api_key:api_secret@cloud_name',
 	'cookie secret': '(your secret here)',
-
+	'static': 'public',
 	'auto update': true,
 	'session': true,
 	'auth': true,

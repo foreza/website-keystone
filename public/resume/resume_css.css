@@ -1,0 +1,92 @@
+.header-attr{
+}
+
+#resume-body{
+    min-width: 1000px;
+}
+
+#objective-toggle{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+#education-toggle{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+#education-toggle p{
+    margin: 0px 0px 5px 0px;
+}
+
+.row{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+p#name-header{
+    margin: 0px;
+    font-size: 50px;
+}
+
+
+span#edu-header{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact-info{
+    text-align: left;
+    padding-top: 20px;
+}
+
+tr td{
+    padding: 0;
+}
+
+tr td.position-name{
+    padding-top: 5px;
+    padding-bottom: 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+tr td.position-date{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td ul li{
+    list-style-type: circle;
+}
+
+th.table-header{
+    text-align: left;
+    padding: 0px;
+    font-size: 30px;
+}
+
+th.table-position{
+    text-align: left;
+}
+
+th.table-date{
+    text-align: right;
+}
+
+td.position-date{
+    text-align: right;
+    font-style: italic;
+}
+
+ul.position-list{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px 0px 0px 20px;
+}
+
+.skills-row{
+    margin-top: 5px;
+}

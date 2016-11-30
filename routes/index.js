@@ -32,6 +32,8 @@ var routes = {
 	api: importRoutes('./api')
 };
 
+
+
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views

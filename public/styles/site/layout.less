@@ -21,6 +21,8 @@
 	display: block;
   position: relative;
   margin: 0 auto;
+	width: 100%;
+	max-height: 300px;
 }
 
 .image-project-listing {
@@ -28,6 +30,19 @@
 	position: relative;
 	max-height: 100px;
 	border-radius: 25px;
+}
+
+// Todo: Refactor and create a style guide
+
+// Applies the theme color to background to the jumbotrons that are used throughout, overriding bootstrap for the time being
+.jumbotron {
+	background-color: #B5B2C2
+}
+
+// Applies the theme color to headers texts that are used throughout, overriding bootstrap for the time being
+
+h1, h2, h3, h4, h5 {
+	color: #5A7D7C;
 }
 
 // Style applying to project listings.
