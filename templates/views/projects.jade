@@ -7,27 +7,25 @@ block content
 		// Repeat to show all the projects
 
 		each project in data.projects
+
 			.container.project-listing
 				// Project Title
 				.row.project-title
-					.col-md-6.project-name-display
+					.col-md-12.col-sm-12.project-name-display
 						if user && user.canAccessKeystone == true
 							p=	project.displayName + "( " + project.name + " )"
+							if project.isComplete == true
+									p=	moment(project.endDate).format("MMMM YYYY")
+								else
+									p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
 						else
 							p= project.displayName
-					.col-md-6.project-date-completion
-						if project.isComplete == true
-							p=	moment(project.startDate).format("MMMM YYYY") + " to " + moment(project.endDate).format("MMMM YYYY")
-						else
-							p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
-
+					
 					// Project Information
-				.row
+				.row.image-project-container
 					// Project Image
-					.col-md-3.col-sm-12
+					.col-md-4.col-sm-12.image-project-column
 						img(src=project.imgUrl).image-project-listing
-					// Add spacing
-					.col-md-1.col-sm-12
 					// Project Information
 					.col-md-8
 						.row
