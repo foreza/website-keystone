@@ -20,7 +20,7 @@ block content
 									p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
 						else
 							p= project.displayName
-					
+
 					// Project Information
 				.row.image-project-container
 					// Project Image
@@ -36,6 +36,24 @@ block content
 								b	My Role:
 								p= project.role
 							.col-md-12.col-sm-12
+								b	Technologies:
+								each tech in project.technologies
+									span=	" " + tech
+								p
+							.col-md-12.col-sm-12
+								if project.link1 != ""
+									a(href=project.linkUrl1)
+										span=	project.link1
+								if project.link2 != ""
+									span	|
+									a(href=project.linkUrl2)
+										span=	" " + project.link2
+								if project.link3 != ""
+									span	|
+									a(href=project.linkUrl3)
+										span=	" " + project.link3
+								else
+									// Do nothing
 							// Temporary placeholder while we get the rest of the page wrapped up | button.btn.btn-default(type='button') Learn More!
 				br
 				br
