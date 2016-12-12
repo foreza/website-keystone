@@ -7,37 +7,53 @@ block content
 		// Repeat to show all the projects
 
 		each project in data.projects
+
 			.container.project-listing
 				// Project Title
 				.row.project-title
-					.col-md-6.project-name-display
+					.col-md-12.col-sm-12.project-name-display
 						if user && user.canAccessKeystone == true
 							p=	project.displayName + "( " + project.name + " )"
+							if project.isComplete == true
+									p=	moment(project.endDate).format("MMMM YYYY")
+								else
+									p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
 						else
 							p= project.displayName
-					.col-md-6.project-date-completion
-						if project.isComplete == true
-							p=	moment(project.startDate).format("MMMM YYYY") + " to " + moment(project.endDate).format("MMMM YYYY")
-						else
-							p=	"In-Progress since: " + moment(project.startDate).format("MMMM YYYY")
 
 					// Project Information
-				.row
+				.row.image-project-container
 					// Project Image
-					.col-md-3.col-sm-12
+					.col-md-4.col-sm-12.image-project-column
 						img(src=project.imgUrl).image-project-listing
-					// Add spacing
-					.col-md-1.col-sm-12
 					// Project Information
 					.col-md-8
 						.row
 							.col-md-12.col-sm-12
-								b	Brief Description:
+								b	Description:
 								p= project.descShort
 							.col-md-12.col-sm-12
-								b	My Role:
+								b	Project Role:
 								p= project.role
 							.col-md-12.col-sm-12
+								b	Technologies:
+								each tech in project.technologies
+									span=	" " + tech
+								p
+							.col-md-12.col-sm-12
+								if project.link1 != ""
+									a(href=project.linkUrl1)
+										span=	project.link1
+								if project.link2 != ""
+									span	|
+									a(href=project.linkUrl2)
+										span=	" " + project.link2
+								if project.link3 != ""
+									span	|
+									a(href=project.linkUrl3)
+										span=	" " + project.link3
+								else
+									// Do nothing
 							// Temporary placeholder while we get the rest of the page wrapped up | button.btn.btn-default(type='button') Learn More!
 				br
 				br
