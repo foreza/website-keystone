@@ -28,18 +28,28 @@
 
 p#name-header{
     margin: 0px;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 
 span#edu-header{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+span#auth-header{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+span#obj-header{
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .contact-info{
     text-align: left;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 tr td{
@@ -51,6 +61,12 @@ tr td.position-name{
     padding-bottom: 1px;
     font-weight: bold;
     font-size: 20px;
+}
+
+tr td.position-name .provided-link a{
+    font-size:15px;
+    color: #000000;
+    margin-left: 10px
 }
 
 tr td.position-date{

@@ -3,26 +3,28 @@ extends ../layouts/default
 block intro
 	.container
 		h1 Contact Jason
+		p	For website, web application, or general consulting requests / quotes, you can also reach out to me directly at jasonthechiu@gmail.com.
+		p	I'll be happy to give you an estimate and timeline.
 
 block content
 	.container
 		if enquirySubmitted
-			h3 Thanks for getting in touch. Jason will be in touch.
+			h3 Thank you! I'll be in touch with you within 3-5 business days.
 		else
 			.row: .col-sm-8.col-md-6
 				form(method='post')
 					input(type='hidden', name='action', value='contact')
 					.form-group(class=validationErrors.name ? 'has-error' : null)
-						label Your Name (both first name and last name preferred)
+						label Name:
 						input(type='text', name='name.full', value=formData['name.full']).form-control
 					.form-group(class=validationErrors.email ? 'has-error' : null)
-						label Best Email to reach you at
+						label Email Address:
 						input(type='email', name='email', value=formData.email).form-control
 					.form-group
-						label Best Phone # to reach you at
+						label Phone Number:
 						input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
 					.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-						label What are you contacting Jason about?
+						label Contact Reason:
 						select(name='enquiryType').form-control
 							option(value='') (select one)
 							each type in enquiryTypes
